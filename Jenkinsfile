@@ -7,10 +7,11 @@ pipeline {
             }
         }
         stage('Test') {
-            steps {
-                sh './hello_exec'
-            }
-        }
+    steps {
+        sh 'invalid_command'  // This will cause an error
+    }
+}
+
         stage('Deploy') {
             steps {
                 echo 'Deploying Application...'
